@@ -12,10 +12,15 @@ int main()
     scanf("%d",&n);
     for(i=0; i<n; i++)
     {
-        printf("Enter process name,arrivaltime,execution time & priority:");
-        //flushall();
-        scanf("%s%d%d%d",pn[i],&at[i],&et[i],&p[i]);
-    }
+       printf("\nEnter process name :\t");
+       scanf("%s",pn[i]);
+       printf("\nEnter arrivaltime:\t");
+       scanf("%d",&at[i]);
+       printf("\nEnter execution time:\t");
+       scanf("%d",&et[i]);
+       printf("\nEnter priority :\t");
+       scanf("%d",&p[i]);
+  }
     for(i=0; i<n; i++)
         for(j=0; j<n; j++)
         {
