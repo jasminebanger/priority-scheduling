@@ -21,13 +21,13 @@ int main()
     {
        printf("||||||||||||||||Enter the details for each process wirtten below:-||||||||||||||||");
 
-       printf("\nEnter process name :\t");
+       printf("\nEnter process name :\t"); // print process name
        scanf("%s",pn[i]);
-       printf("\nEnter arrivaltime:\t");
+       printf("\nEnter arrivaltime:\t"); //print arrival time
        scanf("%d",&at[i]);
-       printf("\nEnter burst time:\t");
+       printf("\nEnter burst time:\t"); //print burst time
        scanf("%d",&et[i]);
-       printf("\nEnter priority :\t");
+       printf("\nEnter priority :\t"); //print priority for process
        scanf("%d",&p[i]);
   }
     for(i=0; i<n; i++)
@@ -44,7 +44,7 @@ int main()
                 temp=et[i];
                 et[i]=et[j];
                 et[j]=temp;
-                strcpy(t,pn[i]);
+                strcpy(t,pn[i]); //copy the strings
                 strcpy(pn[i],pn[j]);
                 strcpy(pn[j],t);
             }
@@ -75,7 +75,7 @@ int main()
     printf("\nPname\tarrivaltime\tburstime\tpriority\twaitingtime\ttatime");
     for(i=0; i<n; i++)
         printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d\t\t%5d",pn[i],at[i],et[i],p[i],wt[i],ta[i]);
-    printf("\nAverage waiting time is:%f",awt);
-    printf("\nAverage turnaroundtime is:%f",ata);
+    printf("\nAverage waiting time is:%f",awt); // print average waiting time
+    printf("\nAverage turnaroundtime is:%f",ata); // print turn around time
     getch();
 }
