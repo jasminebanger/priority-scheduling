@@ -12,6 +12,8 @@ int main()
     scanf("%d",&n);
     for(i=0; i<n; i++)
     {
+       printf("||||||||||||||||Enter the details for each process wirtten below:-||||||||||||||||");
+
        printf("\nEnter process name :\t");
        scanf("%s",pn[i]);
        printf("\nEnter arrivaltime:\t");
