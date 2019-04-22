@@ -1,3 +1,4 @@
+//starting of code
 //headerfiles
 #include<stdio.h>
 #include<conio.h>
@@ -10,7 +11,8 @@ int main()
     //p = priority
     //wt = waiting time
     //ta = turn around time
-    
+    //st=starting time
+    //ft =completion time
     int totwt=0,totta=0;//initialize tot = total waiting time, totta = total turn around time
     float awt,ata; // awt= average waiting time, ata = average turn around time
     char pn[10][10],t[10];
@@ -79,3 +81,4 @@ int main()
     printf("\nAverage turnaroundtime is:%f",ata); // print turn around time
     getch();
 }
+//ending of code
