@@ -55,10 +55,10 @@ int main()
  
         if(i==0)
         {
-            st[i]=at[i];
-            wt[i]=st[i]-at[i];
-            ft[i]=st[i]+et[i];
-            ta[i]=ft[i]-at[i];
+            st[i]=at[i]; // st=starting time
+            wt[i]=st[i]-at[i]; // calculate waiting time
+            ft[i]=st[i]+et[i]; // cal completion time
+            ta[i]=ft[i]-at[i]; // cal turn around time
         }
         else
         {
@@ -67,11 +67,11 @@ int main()
             ft[i]=st[i]+et[i];
             ta[i]=ft[i]-at[i];
         }
-        totwt+=wt[i];
-        totta+=ta[i];
+        totwt+=wt[i]; // totwt=totwt+wt;
+        totta+=ta[i]; //totta=totta+ta;
     }
-    awt=(float)totwt/n;
-    ata=(float)totta/n;
+    awt=(float)totwt/n;//cal average waiting time
+    ata=(float)totta/n;//cal average tur around time
     printf("\nPname\tarrivaltime\tburstime\tpriority\twaitingtime\ttatime");
     for(i=0; i<n; i++)
         printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d\t\t%5d",pn[i],at[i],et[i],p[i],wt[i],ta[i]);
