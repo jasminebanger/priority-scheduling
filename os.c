@@ -1,15 +1,22 @@
+//headerfiles
 #include<stdio.h>
 #include<conio.h>
 #include<string.h>
 int main()
 {
     int et[20],at[10],n,i,j,temp,p[10],st[10],ft[10],wt[10],ta[10];
-    int totwt=0,totta=0;
-    float awt,ata;
+    //declaration et = burst time
+    //at = arrival time
+    //p = priority
+    //wt = waiting time
+    //ta = turn around time
+    
+    int totwt=0,totta=0;//initialize tot = total waiting time, totta = total turn around time
+    float awt,ata; // awt= average waiting time, ata = average turn around time
     char pn[10][10],t[10];
     //clrscr();
-    printf("Enter the number of process:");
-    scanf("%d",&n);
+    printf("Enter the number of process:"); //print total no of process
+    scanf("%d",&n); // input from user
     for(i=0; i<n; i++)
     {
        printf("||||||||||||||||Enter the details for each process wirtten below:-||||||||||||||||");
@@ -18,7 +25,7 @@ int main()
        scanf("%s",pn[i]);
        printf("\nEnter arrivaltime:\t");
        scanf("%d",&at[i]);
-       printf("\nEnter execution time:\t");
+       printf("\nEnter burst time:\t");
        scanf("%d",&et[i]);
        printf("\nEnter priority :\t");
        scanf("%d",&p[i]);
@@ -65,7 +72,7 @@ int main()
     }
     awt=(float)totwt/n;
     ata=(float)totta/n;
-    printf("\nPname\tarrivaltime\texecutiontime\tpriority\twaitingtime\ttatime");
+    printf("\nPname\tarrivaltime\tburstime\tpriority\twaitingtime\ttatime");
     for(i=0; i<n; i++)
         printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d\t\t%5d",pn[i],at[i],et[i],p[i],wt[i],ta[i]);
     printf("\nAverage waiting time is:%f",awt);
